@@ -1,3 +1,7 @@
+/*
+A very simple example about struct and memory free in another function 
+*/
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
