@@ -1,5 +1,6 @@
 /*
 打印输出字符的二进制
+output the binary of a char
 */
 
 #include <stdio.h>
