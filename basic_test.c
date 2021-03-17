@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+#define CUB(x) (x * x * x)
+
 int sq(int c)
 {
     //c * c;
@@ -86,6 +88,10 @@ int main()
         n = 5;
     }
     printf("\n static n = %d \n", n);
+
+    int o, p = 3;
+    o = CUB(p++);             //p++ * p++ * p++ = 3 * 4 * 5
+    printf("%d %d \n", o, p); //output: 60 6
 
     return 0;
 }
