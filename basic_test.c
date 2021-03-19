@@ -69,8 +69,8 @@ int main()
     printf("%d\n", k); //output: 1. 执行顺序是(a<b)<j = (10<20)<5 = 1<5 = 1
 
     int l[3] = {1, 2, 3};
-    printf("%d \n", l[3]);
-    printf("%d \n", l[-1]);
+    printf("%d \n", l[3]); //garbage
+    printf("l[-1]=%d \n", l[-1]);
 
     printf("%c\n", 5 ["helloworld"]);
 
@@ -92,6 +92,21 @@ int main()
     int o, p = 3;
     o = CUB(p++);             //p++ * p++ * p++ = 3 * 4 * 5
     printf("%d %d \n", o, p); //output: 60 6
+
+    int *q = (int *)malloc(2 * sizeof(int));
+    printf("1address of q = %d \n", q);
+    // for (p = 0; p < 5; p++)
+    // {
+    //     printf("q[%d] = %d \n", p, *q++);
+    // }
+    //printf("2address of q = %d \n", q);
+    //printf("3address of q = %d \n", q - 5);
+    //free(q - 5);
+    free(q);
+    printf("2address of q = %d \n", q);
+    q = NULL;
+    free(q);
+    printf("3address of q = %d \n", q);
 
     return 0;
 }
